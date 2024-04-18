@@ -9,30 +9,33 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+    <nav class="navbar navbar-expand-lg ">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="#">GardenFall</a>
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="akciók.html">%Akciók / ajánlatok <span class="sr-only"></span></a>
+          <a class="navbar-brand" href="index.html" style="padding-left: 10px; color: white;">GardenFall</a>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">            
+            <li class="nav-item">
+              <a class="nav-link" href="tippek.html" style="color: white;">Tippek & ötletek</a>              
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="tippek.html">Tippek és ötletek</a>
+              <a class="nav-link" href="csok.html" style="color: white;">CSOK Plusz</a>
             </li>
-            
             <li class="nav-item">
-              <a class="nav-link" href="csok.html">CSOK Plusz</a>
+              <a class="nav-link" href="kosár.html" style="color: white;">Kosár</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Termék keresése" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Keresés</button>
+                <div class="d-flex">
+                <input class="form-control mr-sm-2" type="search" placeholder="Termék keresése" aria-label="Search" id="gombocska" style="margin-left: 50px;">
+                <button class="btn btn-outline-light my-2 my-sm-0" style="margin-left: 10px;" type="submit" id="keresés">Keresés</button>
+              </div>
           </form>
         </div>
       </nav>
+    
 
 
       <div class="container-fluid">
@@ -54,19 +57,114 @@
 
 
 
+      <br>
       <div class="container-fluid">
         <div class="row">
-          <div>Indul a grillszezon!</div> //rgb(155 182 76
+          <div class="egysorosok col-12">Indul a grillszezon!</div>        
+
+
+          <div class="col-md-4 mb-3 mt-4">
+            <div class="card">
+                <img src="imgs/grill1.jpg" class="card-img-top" alt="Termék 1">
+                <div class="card-body">
+                    <h5 class="card-title">BBQ San Diego 4 kerék meghajtás</h5>
+                    <p class="card-text">83.990 Ft</p>
+                    <button class="btn btn-primary">Kosárba</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3 mt-4">
+            <div class="card">
+                <img src="imgs/grill2.jpg" class="card-img-top" alt="Termék 2">
+                <div class="card-body">
+                    <h5 class="card-title">Deluxe faszenes grill</h5>
+                    <p class="card-text">60.990 Ft</p>
+                    <button class="btn btn-primary">Kosárba</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3 mt-4">
+            <div class="card">
+                <img src="imgs/grill3.jpg" class="card-img-top" alt="Termék 3">
+                <div class="card-body">
+                    <h5 class="card-title">Betongrill 213KG</h5>
+                    <p class="card-text">249.990 Ft</p>
+                    <button class="btn btn-primary">Kosárba</button>
+                </div>
+            </div>
+          </div>
+
+          <div class="egysorosok col-12">Itt a fűnyírás ideje!</div>
+          
+          <div class="col-md-4 mb-3 mt-4">
+            <div class="card">
+                <img src="imgs/gep1.png" class="card-img-top" alt="Termék 1">
+                <div class="card-body">
+                    <h5 class="card-title">BOSCH fűnyíró</h5>
+                    <p class="card-text">67.490 Ft</p>
+                    <button class="btn btn-primary">Kosárba</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3 mt-4">
+            <div class="card">
+                <img src="imgs/gep2.jpg" class="card-img-top" alt="Termék 2">
+                <div class="card-body">
+                    <h5 class="card-title">Rolls Royse vágó</h5>
+                    <p class="card-text">19.990 FT</p>
+                    <button class="btn btn-primary">Kosárba</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3 mt-4">
+            <div class="card">
+                <img src="imgs/gep3.png" class="card-img-top" alt="Termék 3">
+                <div class="card-body">
+                    <h5 class="card-title">Bicikli kapa</h5>
+                    <p class="card-text">49.990 Ft</p>
+                    <button class="btn btn-primary">Kosárba</button>
+                </div>
+            </div>
+          </div>
+
+          <div class="egysorosok col-12">Ki kell vágni néhány fát? Mi segítünk!</div>
+
+          <div class="col-md-4 mb-3 mt-4">
+            <div class="card">
+                <img src="imgs/furesz1.jpg" class="card-img-top" alt="Termék 1">
+                <div class="card-body">
+                    <h5 class="card-title">Autmata balta és kapa</h5>
+                    <p class="card-text">6990 Ft</p>
+                    <button class="btn btn-primary">Kosárba</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3 mt-4">
+            <div class="card">
+                <img src="imgs/furesz2.jpg" class="card-img-top" alt="Termék 2">
+                <div class="card-body">
+                    <h5 class="card-title">Retro fűrész</h5>
+                    <p class="card-text">22.990 Ft</p>
+                    <button class="btn btn-primary">Kosárba</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3 mt-4">
+            <div class="card">
+                <img src="imgs/furesz3.jpg" class="card-img-top" alt="Termék 3">
+                <div class="card-body">
+                    <h5 class="card-title">Biztonsági fűrész</h5>
+                    <p class="card-text">5990 Ft</p>
+                    <button class="btn btn-primary">Kosárba</button>
+                </div>
+            </div>
+          </div>
+
 
         </div>
       </div>
 
 
-
-
-
-
-      
 
       <!-- Footer -->
 <footer class="text-center text-lg-start bg-body-tertiary text-muted">
@@ -115,7 +213,7 @@
             <i class="fas fa-gem me-3"></i>Vállalkozásunk
           </h6>
           <p>
-            Üdvözöljük a kerti gépek birodlamában! Fedezze fel kiváló minőségű eszközeinket és inspiráló ötleteinketm hogy álmai kertjét valóra válthassa.
+            Üdvözöljük a kerti gépek birodalmában! Fedezze fel kiváló minőségű eszközeinket és inspiráló ötleteinket, hogy álmai kertjét valóra válthassa.
           </p>
         </div>
         <!-- Grid column -->
@@ -127,16 +225,16 @@
             Segítség, ügyintézés
           </h6>
           <p>
-            <a href="#!" class="text-reset">Vevőszolgálat</a>
+            <a href="404.html" class="text-reset">Vevőszolgálat</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Áruházak</a>
+            <a href="404.html" class="text-reset">Áruházak</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">14 napos elállás</a>
+            <a href="404.html" class="text-reset">14 napos elállás</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Online vitarendezési platfrom</a>
+            <a href="404.html" class="text-reset">Online vitarendezési platfrom</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -148,16 +246,16 @@
             Szolgáltatás
           </h6>
           <p>
-            <a href="#!" class="text-reset">Gépkölcsönzés</a>
+            <a href="404.html" class="text-reset">Gépkölcsönzés</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">vevőmágnes-kalkulátor</a>
+            <a href="404.html" class="text-reset">vevőmágnes-kalkulátor</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">utánfutó kölcsönzés</a>
+            <a href="404.html" class="text-reset">utánfutó kölcsönzés</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Nagyvásárlói program</a>
+            <a href="404.html" class="text-reset">Nagyvásárlói program</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -178,6 +276,7 @@
       </div>
       <!-- Grid row -->
     </div>
+    
   </section>
   <!-- Section: Links  -->
 
@@ -189,5 +288,8 @@
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
+
+
+  <script type="module" src="java.js"></script>
 </body>
 </html>

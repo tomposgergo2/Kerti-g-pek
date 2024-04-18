@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Az oldal nem található</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f1f1; 
+            text-align: center;
+            color: #ffffff; 
+            background-image: url('https://i.pinimg.com/564x/0e/58/55/0e5855e5c5f6bddb93ec670852b5eead.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 0; 
+            margin: 0; 
+        }
+        .container {
+            margin-top: 50px;
+            position: relative;
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.6); 
+            padding: 20px;
+            border-radius: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .bottom-content {
+            position: absolute;
+            left: -15%; 
+            bottom: 30%; 
+            width: 90%; 
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+ 
+        @media only screen and (max-width: 768px) {
+            .bottom-content {
+                left: 10%;
+                bottom: 5%;
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>404 - Az oldal nem található</h1>
+        <img src="imgs/ufós kép.jpg" alt="Ufós tehen kép">
+        <div class="bottom-content"> 
+            <p>Elnézést, de úgy tűnik, hogy az általad keresett oldal nem található.</p>
+            <button onclick="window.location.href = 'index.html';">Vissza a főoldalra</button>
+        </div>
+    </div>
+</body>
+</html>
