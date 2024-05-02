@@ -13,14 +13,24 @@ function kiírat(event) {
     const emailValue = email.value
     const jelszóValue = jelszó.value
     const címValue = cím.value
-    const dátumValue = Number(dátum.value)
+    const dátumValue = new Date(dátum.value)
 
     if (emailValue == "" || jelszóValue == "" || címValue == "" || dátumValue =="") {
         return document.getElementById("figyelem").innerHTML = `<p style = "color: red"> Minden mező kitöltése kötelező </p>`
     }
-    if (dátumValue < 2006) {
-        return document.getElementById("figyelem").innerHTML =  `<p style = "color: red"> Minimum 18 évesnek kell lenni </p>`
+    if (jelszóValue.length < 8) {
+        return document.getElementById("figyelem").innerHTML =  `<p style = "color: red"> Minimum 8 kararakternek kell lennie a jelszónak</p>`
     }
+    if (emailValue.length < 5 || !emailValue.includes('@') || !emailValue.includes('.')) {
+        return figyelem.innerHTML = `<p style="color: red;">Az email címnek legalább 5 karakter hosszúnak kell lennie, tartalmaznia kell '@' jelet és '.' jelet</p>`;
+    }
+    if (címValue.length < 5 || !címValue.includes("utca") || !/\d/.test(címValue)) {
+        return figyelem.innerHTML = `<p style="color: red;">Érvényes címet adjon meg</p>`;
+    }
+    if (String(dátumValue.getFullYear()).length != 4) {
+        return figyelem.innerHTML = `<p style="color: red;">Érvényes évszámot adjon meg</p>`;
+    }
+
     if (emailValue != "" && jelszóValue != "" && címValue != "" && dátumValue   !="") {
         adatok.push({email: emailValue, jelszó: jelszóValue, cím: címValue, dátum: dátumValue})
         email.value = ""
@@ -41,12 +51,16 @@ function kiírat(event) {
 
 
     function mentés(email, jelszó, cím, dátum) {
+        const formattedDate = new Date(dátum).toLocaleDateString('hu-HU');
+
 
         const sor = document.createElement("div")
-        sor.innerHTML = `<b>A felhasználó adati:</b> Email: ${email} Jelszó: ${jelszó} Cím: ${cím} dátum: ${dátum} `
+        sor.innerHTML = `<b>A felhasználó adatai:</b> Email: ${email} Jelszó: ${jelszó} Cím: ${cím} dátum: ${formattedDate} `
         megjelenítés.appendChild(sor)
+        alert("Regisztráció és vásárlás felvétele sikeresen megtörtént")
         
     }
+
     
 }
 

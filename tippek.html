@@ -6,6 +6,16 @@
     <title>Tippek</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <style>
+      body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    margin-top: auto;
+}
+    </style>
 </head>
 <body>
 
@@ -22,20 +32,73 @@
         <li class="nav-item">
           <a class="nav-link" href="csok.html" style="color: white;">CSOK Plusz</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="kosár.html" style="color: white;">Kosár</a>
-        </li>
+        </li> -->
       </ul>
       <form class="form-inline my-2 my-lg-0">
             <div class="d-flex">
-            <input class="form-control mr-sm-2" type="search" placeholder="Termék keresése" aria-label="Search" id="gombocska" style="margin-left: 50px;">
-            <button class="btn btn-outline-light my-2 my-sm-0" style="margin-left: 10px;" type="submit" id="keresés">Keresés</button>
+            <input class="form-control mr-sm-2" type="search" placeholder="Termék keresése" aria-label="Search" id="gombocska" style="margin-left: 50px;" disabled>
+            <button class="btn btn-outline-light my-2 my-sm-0" style="margin-left: 10px;" type="submit" id="keresés" disabled>Keresés</button>
           </div>
       </form>
     </div>
   </nav>
 
   <br>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="egysorosok col-4">Építkezés, felújítás</div>
+      <div class="egysorosok col-4">Kert és szabadidő</div>
+      <div class="egysorosok col-4">Otthon, lakberendezés</div>
+
+      
+      <div class="col-md-4 mb-3 mt-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Hasznos olvasni- és néznivalók a nagyobb munkálatokhoz</h5>
+                <p class="card-text">Segítünk, hogy büszke legyél a házadra, lakásodra!</p>
+                <button class="btn btn-warning" id="megnezemBtn1">Megnézem</button>
+                <div id="megnezemDropdown1" style="display: none; width: 100%;">
+                    <br>
+                    <p id="megnezemText1"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col-md-4 mb-3 mt-4">
+        <div class="card">            
+            <div class="card-body">
+                <h5 class="card-title">Kert és szabadidő</h5>
+                <p class="card-text">Teremtse meg álmai kertjét!</p>
+                <button class="btn btn-warning" id="megnezemBtn2">Megnézem</button>
+                <div id="megnezemDropdown2" style="display: none; width: 100%;">
+                    <br>
+                    <p id="megnezemText2"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3 mt-4">
+        <div class="card">            
+            <div class="card-body">
+                <h5 class="card-title">Otthon, lakberendezés</h5>
+                <p class="card-text">Tippek és ötletek otthonod megteremtéséhez</p>
+                <button class="btn btn-warning" id="megnezemBtn3">Megnézem</button>
+                <div id="megnezemDropdown3" style="display: none; width: 100%;">
+                    <br>
+                    <p id="megnezemText3"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+       
+    </div>
+  </div>
     
           <!-- Footer -->
 <footer class="text-center text-lg-start bg-body-tertiary text-muted">
@@ -158,5 +221,34 @@
     <!-- Copyright -->
   </footer>
   <!-- Footer -->
+
+  <script>
+      function legordul(btnId, dropdownId) {
+          const dropdown = document.getElementById(dropdownId);
+        if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+             dropdown.style.display = 'block'
+        } 
+        else {
+            dropdown.style.display = 'none'
+        }
+    }
+
+      document.getElementById('megnezemBtn1').addEventListener('click', function() {
+        legordul('megnezemBtn1', 'megnezemDropdown1')
+    })
+    document.getElementById('megnezemBtn2').addEventListener('click', function() {
+        legordul('megnezemBtn2', 'megnezemDropdown2')
+    })
+
+     document.getElementById('megnezemBtn3').addEventListener('click', function() {
+        legordul('megnezemBtn3', 'megnezemDropdown3')
+    })
+
+    window.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('megnezemText1').textContent = '1. **Keress tapasztalt szakembereket**: Válassz megbízható építési vállalkozót és szakembereket, akikkel együtt dolgozhatsz az építkezés vagy felújítás során. 2. **Tervezd meg előre**: Alaposan tervezd meg az építkezést vagy felújítást, és készíts részletes tervrajzokat vagy terveket az átalakításokról. 3. **Költségvetés kezelése**: Figyelj oda a költségvetésre, és tervezz be tartalékot váratlan kiadásokra vagy változtatásokra. Válassz minőségi anyagokat és alapanyagokat.'
+        document.getElementById('megnezemText2').textContent = '1. **Tervezz változatos kertet**: Alkoss változatos növényzetet és területeket a kertedben, beleértve a virágágyásokat, füves területeket, pihenőhelyeket és esetlegesen zöldségkertet vagy gyümölcsöst. 2. **Fenntartható kertgazdálkodás**: Ismerd meg a fenntartható kertgazdálkodás módszereit, mint például a komposztálás vagy a víztakarékos öntözés, hogy környezetbarát kertet alakíts ki. 3. **Kényelmes szabadidős területek**: Hozz létre kényelmes és funkcionális szabadidős területeket a kertben, például teraszt, hintaágyat vagy grillezőhelyet, ahol élvezheted az időt családoddal és barátaiddal.'
+        document.getElementById('megnezemText3').textContent = '1. **Személyre szabott stílus**: Válassz olyan bútorokat, dekorációkat és színeket, amelyek tükrözik az egyéni stílusodat és ízlésedet. 2. **Funkcionalitás előtérben**: Alkalmazkodj az otthonod méretéhez és elrendezéséhez, és helyezd előtérbe a funkcionalitást és a praktikumot a bútorok kiválasztásakor és elhelyezésénél. 3. **Megfelelő fényviszonyok**: Fontos, hogy megfelelő mennyiségű és típusú világítást alkalmazz a különböző helyiségekben, hogy kellemes hangulatot teremts és javítsd a szoba funkcionális használhatóságát. '
+    });
+  </script>
 </body>
 </html>
